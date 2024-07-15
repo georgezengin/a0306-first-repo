@@ -16,6 +16,6 @@ environment {
         echo "User=${name}"
         echo "Region=${Region}"
         //echo "NODE_ENV=${NODE_ENV}"
-        sh "echo ${params.Region}"
+        sh "echo ${name} [${params.Region}]"
     }
 }

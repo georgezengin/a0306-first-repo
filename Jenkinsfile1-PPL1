@@ -15,7 +15,7 @@ environment {
     stage('third'){
         echo "User=${name}"
         echo "Region=${Region}"
-        echo "NODE_ENV=${NODE_ENV}"
+        //echo "NODE_ENV=${NODE_ENV}"
         sh "echo ${params.Region}"
     }
 }

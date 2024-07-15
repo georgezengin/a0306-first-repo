@@ -13,8 +13,9 @@ environment {
         sleep 5
     }
     stage('third'){
-        echo "george is here"
-        echo "Region is ${Region}"
-        sh "echo shell echo ${params.Region}"
+        echo "User=${name}"
+        echo "Region=${Region}"
+        echo "NODE_ENV=${NODE_ENV}"
+        sh "echo ${params.Region}"
     }
 }

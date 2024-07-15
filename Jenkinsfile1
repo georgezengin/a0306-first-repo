@@ -1,0 +1,20 @@
+properties([parameters([string(defaultValue: 'moshe', name: 'name'), choice(choices: ['US1', 'EU1', 'LA1', 'AS1', 'OC1'], name: 'Region')])])
+a = ''
+agent { label 'EC2Agent' }
+//    tools {nodejs "node16" }
+environment {
+    NODE_ENV='production'
+}
+  node(a) {
+    stage('first'){
+        sh 'date'
+    }
+    stage('second'){
+        sleep 5
+    }
+    stage('third'){
+        echo "george is here"
+        echo "Region is ${Region}"
+        sh "echo shell echo ${params.Region}"
+    }
+}
